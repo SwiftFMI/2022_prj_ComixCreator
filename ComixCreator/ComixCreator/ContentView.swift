@@ -28,7 +28,7 @@ struct ContentView: View {
             ScrollView {
                 VStack {
                     Button("Create Comix") {
-                        print("Create Comix pressed")
+                        print("Create Comix pressed!")
                     }
                     .buttonStyle(RoundedRectangleButtonStyle())
                     .padding(Edge.Set.horizontal, 100)
