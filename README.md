@@ -9,7 +9,7 @@
 
 ## Ресурси
 Примерни лейаути и балони за текст:
-![примерен изглед](assets/comix.jpg) 
+![image](https://user-images.githubusercontent.com/57129022/221005136-ef67e1b8-a49e-4c01-8c05-32c15e922402.png)
 
 ## Bonus
 
