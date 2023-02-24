@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E3AD24829A9129A00A4E5D0 /* TextBoxGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD24729A9129A00A4E5D0 /* TextBoxGalleryView.swift */; };
+		9E87061F29A7F343001D7283 /* CreateComixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E87061E29A7F343001D7283 /* CreateComixView.swift */; };
 		9E94975129A55F390028AFBB /* ComixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94975029A55F380028AFBB /* ComixView.swift */; };
+		9EF50DD029A9093400EA67C8 /* PictureGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF50DCF29A9093400EA67C8 /* PictureGalleryView.swift */; };
 		9EF5D0B2299C170C00F24C93 /* ComixCreatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5D0B1299C170C00F24C93 /* ComixCreatorApp.swift */; };
 		9EF5D0B4299C170C00F24C93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5D0B3299C170C00F24C93 /* ContentView.swift */; };
 		9EF5D0B6299C170D00F24C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EF5D0B5299C170D00F24C93 /* Assets.xcassets */; };
@@ -35,7 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E3AD24729A9129A00A4E5D0 /* TextBoxGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxGalleryView.swift; sourceTree = "<group>"; };
+		9E87061E29A7F343001D7283 /* CreateComixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateComixView.swift; sourceTree = "<group>"; };
 		9E94975029A55F380028AFBB /* ComixView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComixView.swift; sourceTree = "<group>"; };
+		9EF50DCF29A9093400EA67C8 /* PictureGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureGalleryView.swift; sourceTree = "<group>"; };
 		9EF5D0AE299C170C00F24C93 /* ComixCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComixCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF5D0B1299C170C00F24C93 /* ComixCreatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComixCreatorApp.swift; sourceTree = "<group>"; };
 		9EF5D0B3299C170C00F24C93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +107,9 @@
 				9EF5D0B3299C170C00F24C93 /* ContentView.swift */,
 				9EF5D0B5299C170D00F24C93 /* Assets.xcassets */,
 				9EF5D0B7299C170E00F24C93 /* Preview Content */,
+				9E87061E29A7F343001D7283 /* CreateComixView.swift */,
+				9EF50DCF29A9093400EA67C8 /* PictureGalleryView.swift */,
+				9E3AD24729A9129A00A4E5D0 /* TextBoxGalleryView.swift */,
 			);
 			path = ComixCreator;
 			sourceTree = "<group>";
@@ -262,7 +271,10 @@
 			files = (
 				9EF5D0B4299C170C00F24C93 /* ContentView.swift in Sources */,
 				9EF5D0B2299C170C00F24C93 /* ComixCreatorApp.swift in Sources */,
+				9E3AD24829A9129A00A4E5D0 /* TextBoxGalleryView.swift in Sources */,
 				9E94975129A55F390028AFBB /* ComixView.swift in Sources */,
+				9E87061F29A7F343001D7283 /* CreateComixView.swift in Sources */,
+				9EF50DD029A9093400EA67C8 /* PictureGalleryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
