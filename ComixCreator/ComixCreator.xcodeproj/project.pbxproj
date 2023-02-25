@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		9E3AD24829A9129A00A4E5D0 /* TextBoxGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD24729A9129A00A4E5D0 /* TextBoxGalleryView.swift */; };
+		9E3AD24A29AA6AE200A4E5D0 /* DallePolicyComplianceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD24929AA6AE200A4E5D0 /* DallePolicyComplianceResponse.swift */; };
+		9E3AD24C29AA6BCF00A4E5D0 /* PicturesGenerationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD24B29AA6BCF00A4E5D0 /* PicturesGenerationResponse.swift */; };
+		9E3AD24E29AA6C4500A4E5D0 /* ProtectedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD24D29AA6C4500A4E5D0 /* ProtectedData.swift */; };
+		9E3AD25029AA6D1F00A4E5D0 /* DallePictureGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD24F29AA6D1F00A4E5D0 /* DallePictureGenerator.swift */; };
+		9E3AD25229AA7F6100A4E5D0 /* ComixModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD25129AA7F6100A4E5D0 /* ComixModel.swift */; };
+		9E3AD25429AA802D00A4E5D0 /* ComixTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD25329AA802D00A4E5D0 /* ComixTemplate.swift */; };
+		9E3AD25629AA836C00A4E5D0 /* ComixTemplateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD25529AA836C00A4E5D0 /* ComixTemplateView.swift */; };
+		9E3AD25829AA908B00A4E5D0 /* TemplateOneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD25729AA908B00A4E5D0 /* TemplateOneView.swift */; };
+		9E3AD25A29AA909900A4E5D0 /* TemplateTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD25929AA909900A4E5D0 /* TemplateTwoView.swift */; };
+		9E3AD25C29AA90A300A4E5D0 /* TemplateThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD25B29AA90A300A4E5D0 /* TemplateThreeView.swift */; };
+		9E3AD25E29AA90AE00A4E5D0 /* TemplateFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD25D29AA90AE00A4E5D0 /* TemplateFourView.swift */; };
 		9E87061F29A7F343001D7283 /* CreateComixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E87061E29A7F343001D7283 /* CreateComixView.swift */; };
 		9E94975129A55F390028AFBB /* ComixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94975029A55F380028AFBB /* ComixView.swift */; };
 		9EF50DD029A9093400EA67C8 /* PictureGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF50DCF29A9093400EA67C8 /* PictureGalleryView.swift */; };
@@ -39,6 +50,17 @@
 
 /* Begin PBXFileReference section */
 		9E3AD24729A9129A00A4E5D0 /* TextBoxGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBoxGalleryView.swift; sourceTree = "<group>"; };
+		9E3AD24929AA6AE200A4E5D0 /* DallePolicyComplianceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallePolicyComplianceResponse.swift; sourceTree = "<group>"; };
+		9E3AD24B29AA6BCF00A4E5D0 /* PicturesGenerationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesGenerationResponse.swift; sourceTree = "<group>"; };
+		9E3AD24D29AA6C4500A4E5D0 /* ProtectedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedData.swift; sourceTree = "<group>"; };
+		9E3AD24F29AA6D1F00A4E5D0 /* DallePictureGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DallePictureGenerator.swift; sourceTree = "<group>"; };
+		9E3AD25129AA7F6100A4E5D0 /* ComixModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComixModel.swift; sourceTree = "<group>"; };
+		9E3AD25329AA802D00A4E5D0 /* ComixTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComixTemplate.swift; sourceTree = "<group>"; };
+		9E3AD25529AA836C00A4E5D0 /* ComixTemplateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComixTemplateView.swift; sourceTree = "<group>"; };
+		9E3AD25729AA908B00A4E5D0 /* TemplateOneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateOneView.swift; sourceTree = "<group>"; };
+		9E3AD25929AA909900A4E5D0 /* TemplateTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateTwoView.swift; sourceTree = "<group>"; };
+		9E3AD25B29AA90A300A4E5D0 /* TemplateThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateThreeView.swift; sourceTree = "<group>"; };
+		9E3AD25D29AA90AE00A4E5D0 /* TemplateFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFourView.swift; sourceTree = "<group>"; };
 		9E87061E29A7F343001D7283 /* CreateComixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateComixView.swift; sourceTree = "<group>"; };
 		9E94975029A55F380028AFBB /* ComixView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComixView.swift; sourceTree = "<group>"; };
 		9EF50DCF29A9093400EA67C8 /* PictureGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureGalleryView.swift; sourceTree = "<group>"; };
@@ -79,6 +101,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E3AD25F29AA90C000A4E5D0 /* TemplateViews */ = {
+			isa = PBXGroup;
+			children = (
+				9E3AD25729AA908B00A4E5D0 /* TemplateOneView.swift */,
+				9E3AD25929AA909900A4E5D0 /* TemplateTwoView.swift */,
+				9E3AD25B29AA90A300A4E5D0 /* TemplateThreeView.swift */,
+				9E3AD25D29AA90AE00A4E5D0 /* TemplateFourView.swift */,
+			);
+			path = TemplateViews;
+			sourceTree = "<group>";
+		};
+		9E3AD26029AA910200A4E5D0 /* DalleApi */ = {
+			isa = PBXGroup;
+			children = (
+				9E3AD24D29AA6C4500A4E5D0 /* ProtectedData.swift */,
+				9E3AD24929AA6AE200A4E5D0 /* DallePolicyComplianceResponse.swift */,
+				9E3AD24B29AA6BCF00A4E5D0 /* PicturesGenerationResponse.swift */,
+				9E3AD24F29AA6D1F00A4E5D0 /* DallePictureGenerator.swift */,
+			);
+			path = DalleApi;
+			sourceTree = "<group>";
+		};
+		9E3AD26129AA916B00A4E5D0 /* EditComixViews */ = {
+			isa = PBXGroup;
+			children = (
+				9E87061E29A7F343001D7283 /* CreateComixView.swift */,
+				9EF50DCF29A9093400EA67C8 /* PictureGalleryView.swift */,
+				9E3AD24729A9129A00A4E5D0 /* TextBoxGalleryView.swift */,
+			);
+			path = EditComixViews;
+			sourceTree = "<group>";
+		};
 		9EF5D0A5299C170C00F24C93 = {
 			isa = PBXGroup;
 			children = (
@@ -102,14 +156,17 @@
 		9EF5D0B0299C170C00F24C93 /* ComixCreator */ = {
 			isa = PBXGroup;
 			children = (
+				9E3AD26129AA916B00A4E5D0 /* EditComixViews */,
+				9E3AD26029AA910200A4E5D0 /* DalleApi */,
+				9E3AD25F29AA90C000A4E5D0 /* TemplateViews */,
 				9E94975029A55F380028AFBB /* ComixView.swift */,
 				9EF5D0B1299C170C00F24C93 /* ComixCreatorApp.swift */,
 				9EF5D0B3299C170C00F24C93 /* ContentView.swift */,
 				9EF5D0B5299C170D00F24C93 /* Assets.xcassets */,
 				9EF5D0B7299C170E00F24C93 /* Preview Content */,
-				9E87061E29A7F343001D7283 /* CreateComixView.swift */,
-				9EF50DCF29A9093400EA67C8 /* PictureGalleryView.swift */,
-				9E3AD24729A9129A00A4E5D0 /* TextBoxGalleryView.swift */,
+				9E3AD25129AA7F6100A4E5D0 /* ComixModel.swift */,
+				9E3AD25329AA802D00A4E5D0 /* ComixTemplate.swift */,
+				9E3AD25529AA836C00A4E5D0 /* ComixTemplateView.swift */,
 			);
 			path = ComixCreator;
 			sourceTree = "<group>";
@@ -270,11 +327,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EF5D0B4299C170C00F24C93 /* ContentView.swift in Sources */,
+				9E3AD25C29AA90A300A4E5D0 /* TemplateThreeView.swift in Sources */,
+				9E3AD25029AA6D1F00A4E5D0 /* DallePictureGenerator.swift in Sources */,
+				9E3AD25A29AA909900A4E5D0 /* TemplateTwoView.swift in Sources */,
+				9E3AD25429AA802D00A4E5D0 /* ComixTemplate.swift in Sources */,
+				9E3AD24A29AA6AE200A4E5D0 /* DallePolicyComplianceResponse.swift in Sources */,
+				9E3AD24C29AA6BCF00A4E5D0 /* PicturesGenerationResponse.swift in Sources */,
+				9E3AD25829AA908B00A4E5D0 /* TemplateOneView.swift in Sources */,
+				9E3AD24E29AA6C4500A4E5D0 /* ProtectedData.swift in Sources */,
 				9EF5D0B2299C170C00F24C93 /* ComixCreatorApp.swift in Sources */,
 				9E3AD24829A9129A00A4E5D0 /* TextBoxGalleryView.swift in Sources */,
 				9E94975129A55F390028AFBB /* ComixView.swift in Sources */,
 				9E87061F29A7F343001D7283 /* CreateComixView.swift in Sources */,
+				9E3AD25229AA7F6100A4E5D0 /* ComixModel.swift in Sources */,
 				9EF50DD029A9093400EA67C8 /* PictureGalleryView.swift in Sources */,
+				9E3AD25E29AA90AE00A4E5D0 /* TemplateFourView.swift in Sources */,
+				9E3AD25629AA836C00A4E5D0 /* ComixTemplateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

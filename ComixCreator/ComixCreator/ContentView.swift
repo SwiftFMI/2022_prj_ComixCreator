@@ -24,11 +24,13 @@ struct ContentView: View {
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack {
-                    Button("Create Comix") {
-                        print("Create Comix pressed")
+                    NavigationLink(destination: ComixTemplateView()) {
+                        Button("Create Comix") {
+                            print("Create Comix pressed")
+                        }
                     }
                     .buttonStyle(RoundedRectangleButtonStyle())
                     .padding(Edge.Set.horizontal, 100)
