@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct CreateComixView: View {
-    @ObservedObject var comix: ComixModel
+    @StateObject var comix: ComixModel
     
     var body: some View {
         NavigationStack {
             switch comix.template {
             case .One:
-                TemplateOneView()
+                TemplateOneView(comix: comix)
             case .Two:
-                TemplateTwoView()
+                TemplateTwoView(comix: comix)
             case .Three:
-                TemplateThreeView()
+                TemplateThreeView(comix: comix)
             case .Four:
-                TemplateFourView()
+                TemplateFourView(comix: comix)
             }
         }
     }

@@ -39,7 +39,7 @@ class DallePictureGenerator {
         
         let parameters: [String: Any] = [
             "prompt" : prompt,
-            "n" : 1,
+            "n" : picturesGenerated,
             "size" : "1024x1024",
             "user" : sessionID
         ]
@@ -53,7 +53,7 @@ class DallePictureGenerator {
         
         let (response, _) = try await URLSession.shared.data(for: request)
         let result = try JSONDecoder().decode(PicturesGenerationResponse.self, from: response)
-        
+        print("\(result)")
         return result
     }
 }

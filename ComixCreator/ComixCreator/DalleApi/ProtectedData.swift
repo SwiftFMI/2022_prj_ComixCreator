@@ -7,6 +7,7 @@
 
 import Foundation
 
+let picturesGenerated = 6
 enum ProtectedData {
     static let dalleApiKey: String = ""
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TemplateThreeView: View {
+    @ObservedObject var comix: ComixModel
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,6 +17,6 @@ struct TemplateThreeView: View {
 
 struct TemplateThreeView_Previews: PreviewProvider {
     static var previews: some View {
-        TemplateThreeView()
+        TemplateThreeView(comix: ComixModel(images: [], textClouds: [], template: .Three))
     }
 }

@@ -9,58 +9,61 @@ import SwiftUI
 
 struct PictureGalleryView: View {
     @State private var prompt: String = ""
-    @State private var image: UIImage? = nil
+    @State private var images: [UIImage] = []
     @State private var isLoading: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
-            TextField("Enter prompt", text: $prompt, axis: .vertical)
-                .textFieldStyle(.roundedBorder)
-            
-            Button("Generate") {
-                isLoading = true
-                Task {
-                    do {
-                        let response = try await DallePictureGenerator.shared.generateImage(withPrompt: prompt, apiKey: ProtectedData.dalleApiKey)
-                        
-                        if let url = response.data.map(\.url).first {
-                            let (data, _) = try await URLSession.shared.data(from: url)
+            HStack {
+                TextField("Enter prompt", text: $prompt, axis: .vertical)
+                    .textFieldStyle(.roundedBorder)
+                Button {
+                    isLoading = true
+                    Task {
+                        do {
+                            let response = try await DallePictureGenerator.shared.generateImage(withPrompt: prompt, apiKey: ProtectedData.dalleApiKey)
                             
-                            image = UIImage(data: data)
+                            let urls = response.data.map(\.url)
+                            if !urls.isEmpty {
+                                for url in urls {
+                                    let (data, _) = try await URLSession.shared.data(from: url)
+                                    images.append(UIImage(data: data)!)
+                                }
+                            }
+                            print("IMAGES COUNT: \(images.count)")
                             isLoading = false
+                        } catch {
+                            print(error)
                         }
-                    } catch {
-                        print(error)
                     }
+                } label: {
+                    Image(systemName: "paperplane.fill")
                 }
+                .buttonStyle(.borderedProminent)
             }
-            .buttonStyle(.borderedProminent)
             
-            if let image {
-                Image(uiImage: image)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 256, height: 256)
-                
-                Button("Save Image") {
-                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            
+            if images.count == picturesGenerated {
+                ScrollView(.vertical) {
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
+                        ForEach(images, id: \.self) { image in
+                            Image(uiImage: image)
+                                .resizable()
+                                .scaledToFit()
+                        }
+                    }
                 }
             } else {
-                Rectangle()
-                    .fill(Color.blue)
-                    .frame(width: 256, height: 256)
-                    .overlay {
-                        if isLoading {
-                            VStack {
-                                ProgressView()
-                                
-                                Text("Loading...")
-                            }
-                        }
+                if isLoading {
+                    VStack {
+                        LoadingView()
+                            .scaledToFit()
+                            .padding(90)
                     }
+                }
             }
         }
-        .padding()
+        .padding(10)
     }
 }
 
@@ -69,3 +72,8 @@ struct PictureGalleryView_Previews: PreviewProvider {
         PictureGalleryView()
     }
 }
+
+
+//                Button("Save Image") {
+//                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+//                }
