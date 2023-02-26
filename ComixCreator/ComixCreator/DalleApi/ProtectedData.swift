@@ -8,5 +8,5 @@
 import Foundation
 
 enum ProtectedData {
-    static let dalleApiKey: String = "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"
+    static let dalleApiKey: String = ""
 }
