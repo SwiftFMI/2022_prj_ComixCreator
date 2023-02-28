@@ -35,13 +35,16 @@ class ComixModel: ObservableObject {
             }
             self.images.append(Image("PlusButton2"))
         case .Three:
-            for _ in 0...4 {
-                self.images.append(Image("PlusButton"))
-            }
+                self.images.append(Image("PlusButton3"))
+                self.images.append(Image("PlusButton4"))
+                self.images.append(Image("PlusButton5"))
         case .Four:
-            for _ in 0...3 {
-                self.images.append(Image("PlusButton"))
-            }
+                self.images.append(Image("PlusButton6"))
+                self.images.append(Image("PlusButton7"))
+                self.images.append(Image("PlusButton8"))
+                self.images.append(Image("PlusButton9"))
+                self.images.append(Image("PlusButton10"))
+                self.images.append(Image("PlusButton11"))
         }
     }
 }

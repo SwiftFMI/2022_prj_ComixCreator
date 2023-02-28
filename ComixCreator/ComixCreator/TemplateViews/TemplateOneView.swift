@@ -16,7 +16,7 @@ struct TemplateOneView: View {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
                     ForEach(0...comix.images.count - 1, id: \.self) { index in
                         NavigationLink(destination: PictureGalleryView(imageIndex: index, comix: comix)) {
-                            CustomView(image: comix.images[index])
+                            CustomView(image: comix.images[index], width: 190, height: 100)
                         }
                     }
                 }
@@ -28,6 +28,7 @@ struct TemplateOneView: View {
                 }
                 .buttonStyle(RoundedRectangleButtonStyle())
                 .padding(Edge.Set.horizontal, 30)
+                .padding(Edge.Set.vertical, 20)
             }
         }
     }
@@ -42,12 +43,15 @@ struct TemplateOneView_Previews: PreviewProvider {
 struct CustomView : View {
 
     var image: Image = Image("Empty")
+    var width: CGFloat
+    var height: CGFloat
     
     var body: some View {
         ZStack{
             image
                 .resizable()
-                .scaledToFit()
+                .scaledToFill()
+                .frame(width: width, height: height)
                 .border(Color.blue)
                 .clipped()
         }
