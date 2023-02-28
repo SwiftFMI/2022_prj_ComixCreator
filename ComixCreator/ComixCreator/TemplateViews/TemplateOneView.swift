@@ -8,50 +8,22 @@
 import SwiftUI
 
 struct TemplateOneView: View {
-    @State var goesToTextBoxGallery: Bool = false
     @ObservedObject var comix: ComixModel
     
     var body: some View {
         NavigationStack {
             VStack {
-                HStack {
-                    NavigationLink(destination: PictureGalleryView()) {
-                        CustomView(image: Image("PlusButton"))
-                    }
-                    NavigationLink(destination: PictureGalleryView()) {
-                        CustomView(image: Image("PlusButton"))
-                    }
-                }
-                HStack {
-                    NavigationLink(destination: PictureGalleryView()) {
-                        CustomView(image: Image("PlusButton"))
-                    }
-                    NavigationLink(destination: PictureGalleryView()) {
-                        CustomView(image: Image("PlusButton"))
-                    }
-                }
-                HStack {
-                    NavigationLink(destination: PictureGalleryView()) {
-                        CustomView(image: Image("PlusButton"))
-                    }
-                    NavigationLink(destination: PictureGalleryView()) {
-                        CustomView(image: Image("PlusButton"))
-                    }
-                }
-                HStack {
-                    NavigationLink(destination: PictureGalleryView()) {
-                        CustomView(image: Image("PlusButton"))
-                    }
-                    NavigationLink(destination: PictureGalleryView()) {
-                        CustomView(image: Image("PlusButton"))
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
+                    ForEach(0...comix.images.count - 1, id: \.self) { index in
+                        NavigationLink(destination: PictureGalleryView(imageIndex: index, comix: comix)) {
+                            CustomView(image: comix.images[index])
+                        }
                     }
                 }
             }
             HStack {
-                NavigationLink(destination: TextBoxGalleryView(), isActive: $goesToTextBoxGallery) {
-                    Button(action: { goesToTextBoxGallery = true }) {
-                        Text("Add text")
-                    }
+                NavigationLink(destination: TextBoxGalleryView()) {
+                    Button("Add text") {}
                 }
                 .buttonStyle(RoundedRectangleButtonStyle())
                 .padding(Edge.Set.horizontal, 30)

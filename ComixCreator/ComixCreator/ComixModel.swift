@@ -23,5 +23,24 @@ class ComixModel: ObservableObject {
         self.images = images
         self.textClouds = textClouds
         self.template = template
+        
+        switch template {
+        case .One:
+            for _ in 0...7 {
+                self.images.append(Image("PlusButton"))
+            }
+        case .Two:
+            for _ in 0...5 {
+                self.images.append(Image("PlusButton"))
+            }
+        case .Three:
+            for _ in 0...4 {
+                self.images.append(Image("PlusButton"))
+            }
+        case .Four:
+            for _ in 0...3 {
+                self.images.append(Image("PlusButton"))
+            }
+        }
     }
 }

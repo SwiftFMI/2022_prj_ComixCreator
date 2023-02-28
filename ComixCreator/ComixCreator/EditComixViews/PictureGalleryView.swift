@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct PictureGalleryView: View {
+    
+    var imageIndex = 0
+    
     @State private var prompt: String = ""
     @State private var images: [UIImage] = []
     @State private var isLoading: Bool = false
+    @ObservedObject var comix: ComixModel
+    
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -30,7 +36,6 @@ struct PictureGalleryView: View {
                                     images.append(UIImage(data: data)!)
                                 }
                             }
-                            print("IMAGES COUNT: \(images.count)")
                             isLoading = false
                         } catch {
                             print(error)
@@ -42,7 +47,6 @@ struct PictureGalleryView: View {
                 .buttonStyle(.borderedProminent)
             }
             
-            
             if images.count == picturesGenerated {
                 ScrollView(.vertical) {
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
@@ -50,6 +54,10 @@ struct PictureGalleryView: View {
                             Image(uiImage: image)
                                 .resizable()
                                 .scaledToFit()
+                                .onTapGesture {
+                                    comix.images[imageIndex] = Image(uiImage: image)
+                                    dismiss()
+                                }
                         }
                     }
                 }
@@ -69,7 +77,7 @@ struct PictureGalleryView: View {
 
 struct PictureGalleryView_Previews: PreviewProvider {
     static var previews: some View {
-        PictureGalleryView()
+        PictureGalleryView(comix: ComixModel(images: [], textClouds: [], template: .One))
     }
 }
 
