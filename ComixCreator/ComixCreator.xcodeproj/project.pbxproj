@@ -21,6 +21,7 @@
 		9E3AD25E29AA90AE00A4E5D0 /* TemplateFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD25D29AA90AE00A4E5D0 /* TemplateFourView.swift */; };
 		9E87061F29A7F343001D7283 /* CreateComixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E87061E29A7F343001D7283 /* CreateComixView.swift */; };
 		9E94975129A55F390028AFBB /* ComixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94975029A55F380028AFBB /* ComixView.swift */; };
+		9EDFCEFB29AB8D28002448BF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDFCEFA29AB8D28002448BF /* LoadingView.swift */; };
 		9EF50DD029A9093400EA67C8 /* PictureGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF50DCF29A9093400EA67C8 /* PictureGalleryView.swift */; };
 		9EF5D0B2299C170C00F24C93 /* ComixCreatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5D0B1299C170C00F24C93 /* ComixCreatorApp.swift */; };
 		9EF5D0B4299C170C00F24C93 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5D0B3299C170C00F24C93 /* ContentView.swift */; };
@@ -63,6 +64,7 @@
 		9E3AD25D29AA90AE00A4E5D0 /* TemplateFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFourView.swift; sourceTree = "<group>"; };
 		9E87061E29A7F343001D7283 /* CreateComixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateComixView.swift; sourceTree = "<group>"; };
 		9E94975029A55F380028AFBB /* ComixView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComixView.swift; sourceTree = "<group>"; };
+		9EDFCEFA29AB8D28002448BF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9EF50DCF29A9093400EA67C8 /* PictureGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureGalleryView.swift; sourceTree = "<group>"; };
 		9EF5D0AE299C170C00F24C93 /* ComixCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComixCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF5D0B1299C170C00F24C93 /* ComixCreatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComixCreatorApp.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				9E3AD25129AA7F6100A4E5D0 /* ComixModel.swift */,
 				9E3AD25329AA802D00A4E5D0 /* ComixTemplate.swift */,
 				9E3AD25529AA836C00A4E5D0 /* ComixTemplateView.swift */,
+				9EDFCEFA29AB8D28002448BF /* LoadingView.swift */,
 			);
 			path = ComixCreator;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				9EF50DD029A9093400EA67C8 /* PictureGalleryView.swift in Sources */,
 				9E3AD25E29AA90AE00A4E5D0 /* TemplateFourView.swift in Sources */,
 				9E3AD25629AA836C00A4E5D0 /* ComixTemplateView.swift in Sources */,
+				9EDFCEFB29AB8D28002448BF /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

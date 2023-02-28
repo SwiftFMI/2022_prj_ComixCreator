@@ -11,7 +11,32 @@ struct TemplateTwoView: View {
     @ObservedObject var comix: ComixModel
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack(spacing: 10) {
+                NavigationLink(destination: PictureGalleryView(imageIndex: 0, comix: comix)) {
+                    CustomView(image: comix.images[0])
+                }
+                HStack {
+                    NavigationLink(destination: PictureGalleryView(imageIndex: 1, comix: comix)) {
+                        CustomView(image: comix.images[1])
+                    }
+                    NavigationLink(destination: PictureGalleryView(imageIndex: 2, comix: comix)) {
+                        CustomView(image: comix.images[2])
+                    }
+                }
+                NavigationLink(destination: PictureGalleryView(imageIndex: 3, comix: comix)) {
+                    CustomView(image: comix.images[3])
+                }
+            }
+            .padding(Edge.Set.horizontal, 10)
+            HStack {
+                NavigationLink(destination: TextBoxGalleryView()) {
+                    Button("Add text") {}
+                }
+                .buttonStyle(RoundedRectangleButtonStyle())
+                .padding(Edge.Set.horizontal, 30)
+            }
+        }
     }
 }
 

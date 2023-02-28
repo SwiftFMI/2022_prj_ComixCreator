@@ -30,9 +30,10 @@ class ComixModel: ObservableObject {
                 self.images.append(Image("PlusButton"))
             }
         case .Two:
-            for _ in 0...5 {
+            for _ in 0...2 {
                 self.images.append(Image("PlusButton"))
             }
+            self.images.append(Image("PlusButton2"))
         case .Three:
             for _ in 0...4 {
                 self.images.append(Image("PlusButton"))

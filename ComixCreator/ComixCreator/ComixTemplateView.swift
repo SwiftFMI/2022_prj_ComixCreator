@@ -48,19 +48,4 @@ struct ComixTemplateView_Previews: PreviewProvider {
     }
 }
 
-struct CustomView : View {
 
-    var image: Image = Image("Empty")
-    
-    var body: some View {
-        ZStack{
-            image
-                .resizable()
-                .scaledToFill()
-                .frame(height: 100)
-                .border(Color.blue)
-                .clipped()
-                .padding(10)
-        }
-    }
-}
