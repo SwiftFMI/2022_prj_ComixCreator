@@ -55,7 +55,9 @@ struct PictureGalleryView: View {
                                 .resizable()
                                 .scaledToFit()
                                 .onTapGesture {
-                                    comix.images[imageIndex] = Image(uiImage: image)
+                                    let name = NSUUID().uuidString
+                                    _ = DatabaseUtils.saveImage(image: image, name: name)
+                                    comix.images[imageIndex] = name
                                     dismiss()
                                 }
                         }
@@ -77,7 +79,7 @@ struct PictureGalleryView: View {
 
 struct PictureGalleryView_Previews: PreviewProvider {
     static var previews: some View {
-        PictureGalleryView(comix: ComixModel(images: [], textClouds: [], template: .One))
+        PictureGalleryView(comix: ComixModel(images: [], textClouds: [], template: .One, overview: ""))
     }
 }
 

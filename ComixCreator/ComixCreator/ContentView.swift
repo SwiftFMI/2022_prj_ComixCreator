@@ -23,6 +23,8 @@ struct ContentView: View {
     
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
+    @State var comixes: [ComixModel] = DatabaseUtils.load("comixes")
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -39,38 +41,21 @@ struct ContentView: View {
                         .padding(Edge.Set.bottom, 10)
                     Text("Your collection")
                         .font(.system(size: 18, weight: .medium, design: .serif))
-                    LazyVGrid(columns: columns, spacing: 15) {
-                        NavigationLink(destination: ComixView()) {
-                            Image("Comix1")
-                                .resizable()
-                                .scaledToFit()
-                        }
-                        NavigationLink(destination: ComixView()) {
-                            Image("Comix1")
-                                .resizable()
-                                .scaledToFit()
-                        }
-                        NavigationLink(destination: ComixView()) {
-                            Image("Comix1")
-                                .resizable()
-                                .scaledToFit()
-                        }
-                        NavigationLink(destination: ComixView()) {
-                            Image("Comix1")
-                                .resizable()
-                                .scaledToFit()
-                        }
-                        NavigationLink(destination: ComixView()) {
-                            Image("Comix1")
-                                .resizable()
-                                .scaledToFit()
-                        }
-                        NavigationLink(destination: ComixView()) {
-                            Image("Comix1")
-                                .resizable()
-                                .scaledToFit()
+                    LazyVGrid(columns: columns, spacing: 0) {
+                        if comixes.count > 1 {
+                            ForEach(1...comixes.count - 1, id: \.self) { index in
+                                NavigationLink(destination: ComixView(comix: comixes[index])) {
+                                    Image(uiImage: DatabaseUtils.getSavedImage(named: comixes[index].overview)!)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .padding(Edge.Set.bottom, -50)
+                                }
+                            }
                         }
                     }
+                    .onAppear(perform: {
+                        comixes = DatabaseUtils.load("comixes")
+                    })
                 }
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -80,7 +65,9 @@ struct ContentView: View {
                         .font(.system(size: 28, weight: .bold, design: .serif))
                 }
             }
-        }
+        }.onAppear(perform: {
+            DatabaseUtils.loadPlusButtons()
+        })
     }
 }
 

@@ -12,12 +12,12 @@ struct ComixTemplateView: View {
         NavigationStack {
             VStack {
                 HStack {
-                    NavigationLink(destination: CreateComixView(comix: .init(images: [], textClouds: [], template: .One))) {
+                    NavigationLink(destination: CreateComixView(comix: .init(images: [], textClouds: [], template: .One, overview: ""), isEdit: false)) {
                         Image("Template1")
                             .resizable()
                             .scaledToFit()
                     }
-                    NavigationLink(destination: CreateComixView(comix: .init(images: [], textClouds: [], template: .Two))) {
+                    NavigationLink(destination: CreateComixView(comix: .init(images: [], textClouds: [], template: .Two, overview: ""), isEdit: false)) {
                         Image("Template2")
                             .resizable()
                             .scaledToFit()
@@ -25,12 +25,12 @@ struct ComixTemplateView: View {
                 }
                 .padding(10)
                 HStack {
-                    NavigationLink(destination: CreateComixView(comix: .init(images: [], textClouds: [], template: .Three))) {
+                    NavigationLink(destination: CreateComixView(comix: .init(images: [], textClouds: [], template: .Three, overview: ""), isEdit: false)) {
                         Image("Template3")
                             .resizable()
                             .scaledToFit()
                     }
-                    NavigationLink(destination: CreateComixView(comix: .init(images: [], textClouds: [], template: .Four))) {
+                    NavigationLink(destination: CreateComixView(comix: .init(images: [], textClouds: [], template: .Four, overview: ""), isEdit: false)) {
                         Image("Template4")
                             .resizable()
                             .scaledToFit()

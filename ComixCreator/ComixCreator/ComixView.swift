@@ -8,21 +8,30 @@
 import SwiftUI
 
 struct ComixView: View {
+    @ObservedObject var comix: ComixModel
+    
     var body: some View {
+        var image: UIImage = {
+            return DatabaseUtils.getSavedImage(named: comix.overview)!
+        }()
+        
         VStack{
-            Image("Comix1")
+            Image(uiImage: image)
                 .resizable()
                 .scaledToFit()
                 .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .principal) {
-                        Text("Comix1")
-                            .font(.title.bold())
-                    }
-                }
+                .onAppear(perform: {
+                    image = DatabaseUtils.getSavedImage(named: comix.overview)!
+                })
+//                .toolbar {
+//                    ToolbarItem(placement: .principal) {
+//                        Text("Comix1")
+//                            .font(.title.bold())
+//                    }
+//                }
             HStack{
-                Button("Edit") {
-                    
+                NavigationLink(destination: CreateComixView(comix: comix, isEdit: true)) {
+                    Button("Edit") {  }
                 }
                 .buttonStyle(RoundedRectangleButtonStyle())
                 .padding(Edge.Set.horizontal, 10)
@@ -33,6 +42,7 @@ struct ComixView: View {
                 .padding(Edge.Set.trailing, 10)
             }
         }
+
     }
 }
 
@@ -54,6 +64,6 @@ struct RoundedRectangleButtonStyle: ButtonStyle {
 
 struct ComixView_Previews: PreviewProvider {
     static var previews: some View {
-        ComixView()
+        ComixView(comix: ComixModel(images: [], textClouds: [], template: .One, overview: ""))
     }
 }

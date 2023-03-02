@@ -21,6 +21,8 @@
 		9E3AD25E29AA90AE00A4E5D0 /* TemplateFourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3AD25D29AA90AE00A4E5D0 /* TemplateFourView.swift */; };
 		9E87061F29A7F343001D7283 /* CreateComixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E87061E29A7F343001D7283 /* CreateComixView.swift */; };
 		9E94975129A55F390028AFBB /* ComixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E94975029A55F380028AFBB /* ComixView.swift */; };
+		9EDDF5F929AFCE0000EDDF38 /* DatabaseUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDDF5F829AFCE0000EDDF38 /* DatabaseUtils.swift */; };
+		9EDDF60029B00A7F00EDDF38 /* comixes.json in Resources */ = {isa = PBXBuildFile; fileRef = 9EDDF5FF29B00A7F00EDDF38 /* comixes.json */; };
 		9EDFCEFB29AB8D28002448BF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDFCEFA29AB8D28002448BF /* LoadingView.swift */; };
 		9EF50DD029A9093400EA67C8 /* PictureGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF50DCF29A9093400EA67C8 /* PictureGalleryView.swift */; };
 		9EF5D0B2299C170C00F24C93 /* ComixCreatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF5D0B1299C170C00F24C93 /* ComixCreatorApp.swift */; };
@@ -64,12 +66,14 @@
 		9E3AD25D29AA90AE00A4E5D0 /* TemplateFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFourView.swift; sourceTree = "<group>"; };
 		9E87061E29A7F343001D7283 /* CreateComixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateComixView.swift; sourceTree = "<group>"; };
 		9E94975029A55F380028AFBB /* ComixView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComixView.swift; sourceTree = "<group>"; };
+		9EDDF5F829AFCE0000EDDF38 /* DatabaseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUtils.swift; sourceTree = "<group>"; };
+		9EDDF5FF29B00A7F00EDDF38 /* comixes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = comixes.json; sourceTree = "<group>"; };
 		9EDFCEFA29AB8D28002448BF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		9EF50DCF29A9093400EA67C8 /* PictureGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureGalleryView.swift; sourceTree = "<group>"; };
 		9EF5D0AE299C170C00F24C93 /* ComixCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComixCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF5D0B1299C170C00F24C93 /* ComixCreatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComixCreatorApp.swift; sourceTree = "<group>"; };
 		9EF5D0B3299C170C00F24C93 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		9EF5D0B5299C170D00F24C93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9EF5D0B5299C170D00F24C93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/sdimov/Sofia University/2022_prj_ComixCreator_Marto/ComixCreator/ComixCreator/Assets.xcassets"; sourceTree = "<absolute>"; };
 		9EF5D0B8299C170E00F24C93 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9EF5D0BE299C170E00F24C93 /* ComixCreatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComixCreatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF5D0C2299C170E00F24C93 /* ComixCreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComixCreatorTests.swift; sourceTree = "<group>"; };
@@ -135,6 +139,15 @@
 			path = EditComixViews;
 			sourceTree = "<group>";
 		};
+		9EDDF5FC29AFFB5600EDDF38 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				9EDDF5F829AFCE0000EDDF38 /* DatabaseUtils.swift */,
+				9EDDF5FF29B00A7F00EDDF38 /* comixes.json */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		9EF5D0A5299C170C00F24C93 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +171,7 @@
 		9EF5D0B0299C170C00F24C93 /* ComixCreator */ = {
 			isa = PBXGroup;
 			children = (
+				9EDDF5FC29AFFB5600EDDF38 /* Database */,
 				9E3AD26129AA916B00A4E5D0 /* EditComixViews */,
 				9E3AD26029AA910200A4E5D0 /* DalleApi */,
 				9E3AD25F29AA90C000A4E5D0 /* TemplateViews */,
@@ -305,6 +319,7 @@
 			files = (
 				9EF5D0B9299C170E00F24C93 /* Preview Assets.xcassets in Resources */,
 				9EF5D0B6299C170D00F24C93 /* Assets.xcassets in Resources */,
+				9EDDF60029B00A7F00EDDF38 /* comixes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +362,7 @@
 				9E3AD25E29AA90AE00A4E5D0 /* TemplateFourView.swift in Sources */,
 				9E3AD25629AA836C00A4E5D0 /* ComixTemplateView.swift in Sources */,
 				9EDFCEFB29AB8D28002448BF /* LoadingView.swift in Sources */,
+				9EDDF5F929AFCE0000EDDF38 /* DatabaseUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

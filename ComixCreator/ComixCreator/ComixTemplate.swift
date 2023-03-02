@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum ComixTemplate {
+enum ComixTemplate: Codable {
     case One, Two, Three, Four
 }

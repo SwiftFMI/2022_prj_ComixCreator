@@ -53,7 +53,6 @@ class DallePictureGenerator {
         
         let (response, _) = try await URLSession.shared.data(for: request)
         let result = try JSONDecoder().decode(PicturesGenerationResponse.self, from: response)
-        print("\(result)")
         return result
     }
 }

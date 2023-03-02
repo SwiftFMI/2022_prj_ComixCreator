@@ -29,20 +29,12 @@ struct TemplateTwoView: View {
                 }
             }
             .padding(Edge.Set.horizontal, 10)
-            HStack {
-                NavigationLink(destination: TextBoxGalleryView()) {
-                    Button("Add text") {}
-                }
-                .buttonStyle(RoundedRectangleButtonStyle())
-                .padding(Edge.Set.horizontal, 30)
-                .padding(Edge.Set.vertical, 20)
-            }
         }
     }
 }
 
 struct TemplateTwoView_Previews: PreviewProvider {
     static var previews: some View {
-        TemplateTwoView(comix: ComixModel(images: [], textClouds: [], template: .Two))
+        TemplateTwoView(comix: ComixModel(images: [], textClouds: [], template: .Two, overview: ""))
     }
 }

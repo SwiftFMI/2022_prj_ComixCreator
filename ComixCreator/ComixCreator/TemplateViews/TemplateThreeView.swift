@@ -30,6 +30,6 @@ struct TemplateThreeView: View {
 
 struct TemplateThreeView_Previews: PreviewProvider {
     static var previews: some View {
-        TemplateThreeView(comix: ComixModel(images: [], textClouds: [], template: .Three))
+        TemplateThreeView(comix: ComixModel(images: [], textClouds: [], template: .Three, overview: ""))
     }
 }

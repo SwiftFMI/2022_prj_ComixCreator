@@ -1,4 +1,3 @@
-// Created by Florian Schweizer on 09.11.22
 import Foundation
 
 struct PicturesGenerationResponse: Codable {

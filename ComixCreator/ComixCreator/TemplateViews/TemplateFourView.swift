@@ -28,14 +28,13 @@ struct TemplateFourView: View {
             .padding(Edge.Set.horizontal, 5)
             HStack {
                 NavigationLink(destination: PictureGalleryView(imageIndex: 3, comix: comix)) {
-                    CustomView(image: comix.images[0], width: 145, height: 200)
+                    CustomView(image: comix.images[0], width: 145, height: 195)
                 }
                 NavigationLink(destination: PictureGalleryView(imageIndex: 4, comix: comix)) {
-                    CustomView(image: comix.images[0], width: 229, height: 200)
+                    CustomView(image: comix.images[0], width: 229, height: 195)
                 }
             }
             .padding(Edge.Set.horizontal, 5)
-
             NavigationLink(destination: PictureGalleryView(imageIndex: 5, comix: comix)) {
                 CustomView(image: comix.images[0], width: 380, height: 150)
             }
@@ -46,6 +45,6 @@ struct TemplateFourView: View {
 
 struct TemplateFourView_Previews: PreviewProvider {
     static var previews: some View {
-        TemplateFourView(comix: ComixModel(images: [], textClouds: [], template: .Four))
+        TemplateFourView(comix: ComixModel(images: [], textClouds: [], template: .Four, overview: ""))
     }
 }
