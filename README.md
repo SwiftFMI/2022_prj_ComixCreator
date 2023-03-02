@@ -1,16 +1,18 @@
-# Забавни комикси
+# Funny Comixes
 
-Малкия Иванчо обича да чете комикси, но още повече обича да съчинява истории за своите приятели. Понеже не може да рисува добре, често взема картинки от (Dalle)[https://openai.com/api/] и добавя различни коментари. Но за целта винаги използва компютъра си у дома. Всички негови приятели в училище имат страхотни телефони и той си е купил последния модел iPhone и има нуждата от приложение, което да му помогне да създава своите комикци.
+Do you really like reading comixes and making up your own stories? This application provides you with all you need to create your own comix. It has different templates, which you can use, homepage, where you can view your collection of comixes and other features, BUT. most importantly, you can generate your own pictures for your comix by making up a prompt message for the great [Dalle API](https://openai.com/api/). 
 
-Приложението трябва да позволява генерирането на картинки използвайки dall-e api-а и въвеждане на текст. Трябва да има галерия от предефинирани шаблони за комикси, където да може да се използват генерираните картинки и да има възможност за добавяне на текст към комикса. Един комикс може да се състои от една или повече картинки.
+Want to share your comix with a friend? We've got you covered - just press "Save image" and a picture of your comix will be saved to your gallery.
 
-Приложението трябва да може да поддържа списък с комикси локално на устройството. Потребителя да може да създава нов комиск или да редактира вече съществуващ.
-Комиксите да могат да се споделят и записват като картинки в галерията на телефона.
+# Technical information
+This application is compatible with iOS devices
 
 ## Демо
 ![ComicCreatorDemo](https://user-images.githubusercontent.com/57129022/222514574-a5dd4481-b967-45e9-8f3a-6554e62dfb2f.gif)
 
-# Технически елементи:
-* Dall-e API (openai.com/api)
-* Различните layout-и на комикси са взети като картинки с прозрачност.
-* Списъкът на локалните комикси е реализиран с файл от тип json.
+### Techstack
+ * Dall-e API
+ * Swiftui views
+ * Database with JSON
+ * Permissions (storage access)
+ * ImageRenderer (taking snapshots of views)
