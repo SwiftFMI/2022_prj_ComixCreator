@@ -15,4 +15,4 @@ This application is compatible with iOS devices
  * Swiftui views
  * Database with JSON
  * Permissions (storage access)
- * ImageRenderer (taking snapshots of views)
+ * UIGraphicsImageRenderer (taking snapshots of views)
