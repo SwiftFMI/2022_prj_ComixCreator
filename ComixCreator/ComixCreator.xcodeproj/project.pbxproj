@@ -66,6 +66,7 @@
 		9E3AD25D29AA90AE00A4E5D0 /* TemplateFourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateFourView.swift; sourceTree = "<group>"; };
 		9E87061E29A7F343001D7283 /* CreateComixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateComixView.swift; sourceTree = "<group>"; };
 		9E94975029A55F380028AFBB /* ComixView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComixView.swift; sourceTree = "<group>"; };
+		9E95758429B1153700F36EEF /* ComixCreator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ComixCreator.entitlements; sourceTree = "<group>"; };
 		9EDDF5F829AFCE0000EDDF38 /* DatabaseUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseUtils.swift; sourceTree = "<group>"; };
 		9EDDF5FF29B00A7F00EDDF38 /* comixes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = comixes.json; sourceTree = "<group>"; };
 		9EDFCEFA29AB8D28002448BF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -171,6 +172,7 @@
 		9EF5D0B0299C170C00F24C93 /* ComixCreator */ = {
 			isa = PBXGroup;
 			children = (
+				9E95758429B1153700F36EEF /* ComixCreator.entitlements */,
 				9EDDF5FC29AFFB5600EDDF38 /* Database */,
 				9E3AD26129AA916B00A4E5D0 /* EditComixViews */,
 				9E3AD26029AA910200A4E5D0 /* DalleApi */,
@@ -518,12 +520,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ComixCreator/ComixCreator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ComixCreator/Preview Content\"";
 				DEVELOPMENT_TEAM = 2L24TQ8W95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app requires storage permissions to save comixes to your gallery.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -547,12 +551,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ComixCreator/ComixCreator.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ComixCreator/Preview Content\"";
 				DEVELOPMENT_TEAM = 2L24TQ8W95;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "This app requires storage permissions to save comixes to your gallery.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

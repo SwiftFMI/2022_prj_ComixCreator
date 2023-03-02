@@ -64,6 +64,16 @@ class DatabaseUtils {
         }
         do {
             let path = directory.appendingPathComponent("\(name).png")!
+            if FileManager.default.fileExists(atPath: path.absoluteString) {
+                do
+                {
+                    try FileManager.default.removeItem(atPath: path.absoluteString)
+                }
+                catch
+                {
+                    print(error)
+                }
+            }
             try data.write(to: path)
             return path.absoluteString
         } catch {

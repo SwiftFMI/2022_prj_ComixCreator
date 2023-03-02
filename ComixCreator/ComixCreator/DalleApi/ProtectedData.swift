@@ -10,5 +10,5 @@ import Foundation
 let picturesGenerated = 2
 
 enum ProtectedData {
-    static let dalleApiKey: String = "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"
+    static let dalleApiKey: String = "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"
 }

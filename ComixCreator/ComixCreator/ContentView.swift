@@ -48,7 +48,8 @@ struct ContentView: View {
                                     Image(uiImage: DatabaseUtils.getSavedImage(named: comixes[index].overview)!)
                                         .resizable()
                                         .scaledToFit()
-                                        .padding(Edge.Set.bottom, -50)
+                                        .frame(width: 190)
+                                        .padding(Edge.Set.vertical, -17)
                                 }
                             }
                         }

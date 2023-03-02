@@ -84,6 +84,4 @@ struct PictureGalleryView_Previews: PreviewProvider {
 }
 
 
-//                Button("Save Image") {
-//                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-//                }
+

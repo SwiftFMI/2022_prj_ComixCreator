@@ -31,15 +31,17 @@ struct CreateComixView: View {
                 NavigationLink(destination: TextBoxGalleryView()) {
                     Button("Add text") {}
                 }
-                .buttonStyle(RoundedRectangleButtonStyle())
+                .buttonStyle(RoundedRectangleButtonStyle(isDisabled: true))
                 .padding(Edge.Set.horizontal, 30)
                 .padding(Edge.Set.vertical, 20)
+                .disabled(true)
                 
                 Button("Save") {
                     if !isEdit {
                         comix.overview = NSUUID().uuidString
                     }
-                    _ = DatabaseUtils.saveImage(image: snapshot(), name: comix.overview)
+                    _ = DatabaseUtils.saveImage(image: snapshot(), name: comix.overview)!
+                    comix.overview = comix.overview
                     DatabaseUtils.write(comix)
                     dismiss()
                 }
@@ -47,13 +49,6 @@ struct CreateComixView: View {
                 .padding(Edge.Set.horizontal, 30)
                 .padding(Edge.Set.vertical, 20)
             }
-            Button("Set second picture") {
-                let comixTest: [ComixModel] = DatabaseUtils.load("comixes")
-                print(comixTest)
-            }
-            .buttonStyle(RoundedRectangleButtonStyle())
-            .padding(Edge.Set.horizontal, 30)
-            .padding(Edge.Set.vertical, 20)
         }
     }
 }
@@ -70,7 +65,7 @@ extension View {
         let view = controller.view
 
         let targetSize = CGSize(width: 400, height: 700)
-        view?.bounds = CGRect(x: 0, y: -240, width: 400, height: 800)
+        view?.bounds = CGRect(x: 0, y: -190, width: 400, height: 800)
         view?.backgroundColor = .clear
 
         let renderer = UIGraphicsImageRenderer(size: targetSize)

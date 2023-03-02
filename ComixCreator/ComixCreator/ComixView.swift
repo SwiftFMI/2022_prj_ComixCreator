@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ComixView: View {
     @ObservedObject var comix: ComixModel
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
         var image: UIImage = {
@@ -23,20 +24,16 @@ struct ComixView: View {
                 .onAppear(perform: {
                     image = DatabaseUtils.getSavedImage(named: comix.overview)!
                 })
-//                .toolbar {
-//                    ToolbarItem(placement: .principal) {
-//                        Text("Comix1")
-//                            .font(.title.bold())
-//                    }
-//                }
+
             HStack{
                 NavigationLink(destination: CreateComixView(comix: comix, isEdit: true)) {
                     Button("Edit") {  }
                 }
                 .buttonStyle(RoundedRectangleButtonStyle())
                 .padding(Edge.Set.horizontal, 10)
-                Button("Export image") {
-            
+                Button("Save Image") {
+                    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                    dismiss()
                 }
                 .buttonStyle(RoundedRectangleButtonStyle())
                 .padding(Edge.Set.trailing, 10)
@@ -47,7 +44,10 @@ struct ComixView: View {
 }
 
 struct RoundedRectangleButtonStyle: ButtonStyle {
-  func makeBody(configuration: Configuration) -> some View {
+    
+    var isDisabled: Bool = false
+
+    func makeBody(configuration: Configuration) -> some View {
     Button(action: {}, label: {
       HStack {
         Spacer()
@@ -57,9 +57,9 @@ struct RoundedRectangleButtonStyle: ButtonStyle {
     })
     .padding()
     .allowsHitTesting(false)
-    .background(Color("babyBlue")).cornerRadius(25)
+    .background(Color(isDisabled ? "disabledGrey" : "babyBlue")).cornerRadius(25)
     .scaleEffect(configuration.isPressed ? 0.95 : 1)
-  }
+    }
 }
 
 struct ComixView_Previews: PreviewProvider {
