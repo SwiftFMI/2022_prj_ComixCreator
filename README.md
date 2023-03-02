@@ -8,7 +8,7 @@
 Комиксите да могат да се споделят и записват като картинки в галерията на телефона.
 
 ## Демо
-![ComicCreatorDemo](https://user-images.githubusercontent.com/57129022/222511986-3cab3aeb-4c2d-49bc-965a-691e5d06e0f5.gif)
+![ComicCreatorDemo](https://user-images.githubusercontent.com/57129022/222514574-a5dd4481-b967-45e9-8f3a-6554e62dfb2f.gif)
 
 ## Bonus
 
