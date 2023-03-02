@@ -7,7 +7,7 @@ Want to share your comix with a friend? We've got you covered - just press "Save
 # Technical information
 This application is compatible with iOS devices
 
-## Демо
+## Demo
 ![ComicCreatorDemo](https://user-images.githubusercontent.com/57129022/222514574-a5dd4481-b967-45e9-8f3a-6554e62dfb2f.gif)
 
 ### Techstack
