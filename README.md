@@ -4,7 +4,7 @@ Do you really like reading comixes and making up your own stories? This applicat
 
 Want to share your comix with a friend? We've got you covered - just press "Save image" and a picture of your comix will be saved to your gallery.
 
-# Technical information
+## Technical information
 This application is compatible with iOS devices
 
 ## Demo
